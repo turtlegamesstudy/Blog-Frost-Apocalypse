@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frost Apocalypse — Bitácora de Desarrollo | Turtle Games Study</title>
+    <title>Frost Apocalypse — Bitácora de Desarrollo | Turtle Games Dev</title>
     <link rel="shortcut icon" href="IMG/TurtleIcon.ico" />
     <link rel="stylesheet" title="style" href="Style.css" hrefLang="es" />
 </head>
@@ -14,24 +14,29 @@
     <canvas id="snow-canvas"></canvas>
 
     <header>
-        <img src="./IMG/logo.png" alt="Turtle Games Study">
-        <h1>FROST <span>APOCALYPSE</span></h1>
-        <p class="tagline">Un padre, un hijo, un mundo que se congeló antes de morir.</p>
-        <span class="status-badge">En desarrollo</span>
+        <div class="letterbox-bar top"></div>
+        <div class="letterbox-bar bottom"></div>
 
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#blog">Bitácora</a></li>
-                <li><a href="#about">Estudio</a></li>
-                <li><a href="#faq">Preguntas</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="hero-inner">
+            <img class="logo" src="./IMG/logo.png" alt="Turtle Games Dev">
+            <h1>FROST <span>APOCALYPSE</span></h1>
+            <p class="tagline" id="tagline"></p>
+            <span class="status-badge">En desarrollo</span>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#blog">Bitácora</a></li>
+                    <li><a href="#about">Estudio</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="home">
-        <span class="eyebrow">Turtle Games Study — Nicaragua</span>
+        <span class="eyebrow">Turtle Games Dev — Nicaragua</span>
         <h2>Bienvenido al blog oficial de Frost Apocalypse</h2>
         <p>En este espacio documento el desarrollo de Frost Apocalypse: cada avance, cada retroceso y cada
             decisión detrás de mi segundo juego como estudio indie nicaragüense.</p>
@@ -46,10 +51,10 @@
     <section id="blog">
         <article>
             <span class="eyebrow">Bitácora de desarrollo</span>
-            <h2><span class="important">TURTLE GAMES STUDY</span> presenta el desarrollo de Frost Apocalypse, uno de
+            <h2><span class="important">TURTLE GAMES DEV</span> presenta el desarrollo de Frost Apocalypse, uno de
                 los primeros estudios de videojuegos de Nicaragua.</h2>
             <p>¡Bienvenidos al blog de desarrollo de <span class="important">Frost Apocalypse</span>! En este
-                viaje, <span class="important">Turtle Games Study</span> comparte los secretos detrás del
+                viaje, <span class="important">Turtle Games Dev</span> comparte los secretos detrás del
                 desarrollo de <span class="important">Frost Apocalypse</span>, su segundo juego creado en Nicaragua.</p>
 
             <div id="extended-description" class="hidden">
@@ -62,9 +67,9 @@
                 <p>Este blog será tu ventana al proceso creativo, mostrando conceptos detrás de escena, avances
                     exclusivos y momentos destacados del desarrollo.</p>
 
-                <div class="year-marker">2023</div>
+                <div class="year-marker reveal">2023</div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 01</span>
                     <h2>Idea principal</h2>
                     <p>La idea del juego surgió en 2022, cuando un joven de 14 años anhelaba crear mundos virtuales y era
@@ -77,29 +82,33 @@
                         con eso arrancó el desarrollo del juego.</p>
 
                     <h3>Captura del mapa inicial</h3>
-                    <img src="./IMG/Captura casas.png" alt="Descripción de la imagen 1">
+                    <div class="frame"><img src="./IMG/Captura casas.png" alt="Descripción de la imagen 1"></div>
                     <h3>Captura del mapa inicial con URP</h3>
-                    <img src="./IMG/Captura urp.png" alt="Descripción de la imagen 2">
+                    <div class="frame"><img src="./IMG/Captura urp.png" alt="Descripción de la imagen 2"></div>
                     <h3>Captura del mapa inicial, casa creada con ProBuilder</h3>
-                    <img src="./IMG/Captura3.png" alt="Descripción de la imagen 3">
+                    <div class="frame"><img src="./IMG/Captura3.png" alt="Descripción de la imagen 3"></div>
                     <h3>Captura del menú inicial</h3>
-                    <img src="./IMG/menu11.png" alt="Descripción de la imagen 4">
+                    <div class="frame"><img src="./IMG/menu11.png" alt="Descripción de la imagen 4"></div>
                     <h3>Modelado de casas para el juego</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Pre-Alpha_5.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Pre-Alpha_5.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
 
                     <h3>Video del desarrollo del juego — pre-alpha v_pf_1.3.0</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Pre-Alpha_2.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Pre-Alpha_2.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <p>Estas son las primeras fases del juego, como pueden ver está en una etapa muy temprana, pero
                         seguiré esforzándome para lanzar el juego lo más pronto posible.</p>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 02</span>
                     <h2>Historia del juego</h2>
                     <p>¿Se preguntan qué es este juego y cuál es su historia?</p>
@@ -112,43 +121,47 @@
 
                     <h3>Historia y personajes principales</h3>
                     <h3>David</h3>
-                    <img src="./IMG/Captura jostin.png" alt="arte conceptual 1">
+                    <div class="frame"><img src="./IMG/Captura jostin.png" alt="arte conceptual 1"></div>
                     <h3>Max</h3>
-                    <img src="./IMG/Captura jack real.png" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Captura jack real.png" alt="arte conceptual 2"></div>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 03</span>
                     <h2>Arte conceptual del juego</h2>
                     <p>A continuación les muestro arte conceptual de mi juego.</p>
                     <h3>Arte conceptual 1</h3>
-                    <img src="./IMG/arte1.jfif" alt="arte conceptual 1">
+                    <div class="frame"><img src="./IMG/arte1.jfif" alt="arte conceptual 1"></div>
                     <h3>Arte conceptual 2</h3>
-                    <img src="./IMG/arte2.jfif" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/arte2.jfif" alt="arte conceptual 2"></div>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 04</span>
                     <h2>Primeras mecánicas y controles</h2>
                     <p>En esta fase ya tengo algunas mecánicas programadas: caminar, correr, agacharse, arrastrarse por
                         el suelo, saltar obstáculos, subir a plataformas, sistemas de combate y mucho más.</p>
 
                     <h3>Video del desarrollo — primera cinemática de prueba</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Pre-Alpha_3.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Pre-Alpha_3.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <h3>Video del desarrollo del juego — mecánicas</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Pre-Alpha_4.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Pre-Alpha_4.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <h3>Importante</h3>
                     <p>Cabe recalcar que todos los sistemas de movimiento y mecánicas los programo yo mismo, por lo
                         tanto no uso ningún tipo de assets o herramientas externas.</p>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 05</span>
                     <h2>Primeras zonas del mapa</h2>
                     <p>En esta fase ya tenemos la conceptualización de la primera zona de juego, pero en estado
@@ -157,19 +170,21 @@
                         Unity 3D utilizando el canal de renderizado URP.</p>
 
                     <h3>Primeras zonas</h3>
-                    <img src="./IMG/211123.png" alt="arte conceptual 1">
+                    <div class="frame"><img src="./IMG/211123.png" alt="arte conceptual 1"></div>
                     <h3>Primeras zonas</h3>
-                    <img src="./IMG/21112023 adelanto.png" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/21112023 adelanto.png" alt="arte conceptual 2"></div>
                     <h3>Video de las primeras zonas en block mesh map</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Pre-Alpha_1.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Pre-Alpha_1.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <p>Cabe recalcar que aún están en una fase muy temprana; trabajaré para terminar lo más pronto
                         posible el mapa detallado y listo para implementar la historia.</p>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 06</span>
                     <h2>Tema musical oficial del juego</h2>
                     <p>Para la música de mi juego tomé como inspiración el tema de The Last of Us Parte 1, compuesto
@@ -186,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 07</span>
                     <h2>Lanzamiento de demo y juego oficial</h2>
                     <p>Tengo previsto lanzar una demo jugable entre finales de 2024 y principios de 2025, para
@@ -195,50 +210,56 @@
                         final, mostrando siempre parte del trabajo.</p>
                 </div>
 
-                <div class="year-marker">2024</div>
+                <div class="year-marker reveal">2024</div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 01</span>
                     <h2>Nuevas zonas y mapas de block mesh</h2>
                     <h3>Expansión de mapa 1</h3>
-                    <img src="./IMG/Expancion1.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Expancion1.jpg" alt="arte conceptual 2"></div>
                     <h3>Expansión de mapa 2</h3>
-                    <img src="./IMG/Expancion2.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Expancion2.jpg" alt="arte conceptual 2"></div>
                 </div>
 
-                <div class="year-marker">2025</div>
+                <div class="year-marker reveal">2025</div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 01</span>
                     <h2>Nuevas zonas y mejoras gráficas</h2>
                     <h3>El bosque</h3>
-                    <img src="./IMG/Bosque1.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Bosque1.jpg" alt="arte conceptual 2"></div>
                     <h3>El bosque 2</h3>
-                    <img src="./IMG/Bosque2.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Bosque2.jpg" alt="arte conceptual 2"></div>
                     <h3>El bosque 3</h3>
-                    <img src="./IMG/Bosque3.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Bosque3.jpg" alt="arte conceptual 2"></div>
                     <h3>El bosque de noche</h3>
-                    <img src="./IMG/Bosque4.jpg" alt="arte conceptual 2">
+                    <div class="frame"><img src="./IMG/Bosque4.jpg" alt="arte conceptual 2"></div>
                 </div>
 
-                <div class="chapter">
+                <div class="chapter reveal">
                     <span class="eyebrow">Capítulo 02</span>
                     <h2>Teaser trailer de Frost Apocalypse</h2>
                     <h3>Teaser trailer versión 1</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Teaser_v1.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Teaser_v1.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <h3>Teaser trailer versión 2</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Teaser_v2.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Teaser_v2.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                     <h3>Teaser trailer versión 3</h3>
-                    <video controls width="600">
-                        <source src="./IMG/Teaser_v3.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                    <div class="frame video">
+                        <video controls width="600">
+                            <source src="./IMG/Teaser_v3.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                 </div>
             </div>
 
@@ -257,7 +278,7 @@
         <h2>Preguntas Frecuentes</h2>
 
         <ul>
-            <li>
+            <li class="reveal">
                 <h3>¿Cuál es la premisa principal del juego?</h3>
                 <p>La premisa de "Frost Apocalypse" se centra en un mundo que enfrenta una doble amenaza: el cambio
                     climático desencadenado por el calentamiento global y la liberación de un virus prehistórico
@@ -267,27 +288,27 @@
                     narrativa explora la relación entre padre e hijo, la lucha por la supervivencia y las decisiones
                     difíciles que deben tomarse en un mundo transformado.</p>
             </li>
-            <li>
+            <li class="reveal">
                 <h3>¿En qué plataformas estará disponible el juego?</h3>
                 <p>El juego está pensado para PC y se subirá a la plataforma de Steam. Si recibe suficiente apoyo,
                     también se subirá a PlayStation y Xbox.</p>
             </li>
-            <li>
+            <li class="reveal">
                 <h3>¿Cuándo se lanzará el juego?</h3>
                 <p>Si bien no sabemos con exactitud cuándo lanzaremos el juego, tengo previsto que salga entre 2025
                     y 2026; el mes y el día ya están definidos: será el 2 de febrero.</p>
             </li>
-            <li>
+            <li class="reveal">
                 <h3>¿Tendrá una beta o demo jugable?</h3>
                 <p>Frost Apocalypse tendrá una demo jugable entre finales de 2024 y principios de 2025.</p>
             </li>
-            <li>
+            <li class="reveal">
                 <h3>¿Cómo puedo seguir el progreso del desarrollo?</h3>
                 <p>Puedes seguir el proceso de desarrollo en esta página, la web oficial del estudio, o bien a través
                     de nuestras redes sociales: Facebook, Twitter, Instagram, TikTok, y puedes unirte al canal de
-                    Discord de Turtle Games Study.</p>
+                    Discord de Turtle Games Dev.</p>
             </li>
-            <li>
+            <li class="reveal">
                 <h3>¿El juego será gratuito o de pago?</h3>
                 <p>Tenemos previsto que el juego sea de pago, aunque no sabemos su costo exacto; rondará entre 10 y
                     20 dólares. La demo que lanzaremos será totalmente gratis.</p>
@@ -297,12 +318,12 @@
 
     <section id="about">
         <span class="eyebrow">Ficha del estudio</span>
-        <h2>Acerca de Turtle Games Study</h2>
-        <p>Bienvenido a Turtle Games Study, un rincón creativo fundado y dirigido por Hanzell René Mayorga Calero.
+        <h2>Acerca de Turtle Games Dev</h2>
+        <p>Bienvenido a Turtle Games Dev, un rincón creativo fundado y dirigido por Hanzell René Mayorga Calero.
             Soy el único miembro de este estudio indie, y mi pasión por los videojuegos y la creatividad me impulsa
             a explorar mundos virtuales únicos.</p>
 
-        <p>En Turtle Games Study me esfuerzo por fusionar la programación, el modelado y el diseño gráfico para dar
+        <p>En Turtle Games Dev me esfuerzo por fusionar la programación, el modelado y el diseño gráfico para dar
             vida a experiencias de juego cautivadoras. Aunque soy el único desarrollador, cada línea de código y
             cada detalle de diseño reflejan mi dedicación y amor por la creación de videojuegos.</p>
 
@@ -315,9 +336,9 @@
         <span class="eyebrow">Canales de transmisión</span>
         <h2>Contacto</h2>
         <p>¿Tienes preguntas, comentarios o simplemente quieres ponerte en contacto? Estamos aquí para escucharte.
-            Utiliza la siguiente información para comunicarte con Turtle Games Study:</p>
+            Utiliza la siguiente información para comunicarte con Turtle Games Dev:</p>
         <p>Correo electrónico: turtlegamesstudy@gmail.com</p>
-        <p>Redes sociales: Turtle Games Study</p>
+        <p>Redes sociales: Turtle Games Dev</p>
 
         <div class="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61552217061384&locale=es_LA" target="_blank"><img
@@ -333,7 +354,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Turtle Games Study. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Turtle Games Dev. Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -351,7 +372,7 @@
         }
     </script>
 
-    <!-- Nevada tenue de fondo, en reemplazo del efecto de partículas anterior -->
+    <!-- Nevada tenue de fondo -->
     <script>
         (function () {
             var canvas = document.getElementById('snow-canvas');
@@ -400,6 +421,54 @@
                 requestAnimationFrame(tick);
             }
             requestAnimationFrame(tick);
+        })();
+    </script>
+
+    <!-- Efecto de máquina de escribir para el subtítulo del título -->
+    <script>
+        (function () {
+            var el = document.getElementById('tagline');
+            var text = 'Un padre, un hijo, un mundo que se congeló antes de morir.';
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (reduceMotion) {
+                el.textContent = text;
+                return;
+            }
+
+            el.classList.add('typing');
+            var i = 0;
+            function type() {
+                if (i <= text.length) {
+                    el.textContent = text.slice(0, i);
+                    i++;
+                    setTimeout(type, 32);
+                } else {
+                    setTimeout(function () { el.classList.remove('typing'); }, 900);
+                }
+            }
+            setTimeout(type, 900);
+        })();
+    </script>
+
+    <!-- Revelado de capítulos y preguntas al hacer scroll -->
+    <script>
+        (function () {
+            var items = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window) || !items.length) {
+                items.forEach(function (el) { el.classList.add('is-visible'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+            items.forEach(function (el) { observer.observe(el); });
         })();
     </script>
 
