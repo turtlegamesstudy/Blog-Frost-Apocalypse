@@ -1,6 +1,6 @@
 /* ============================================================
    FROST APOCALYPSE — Bitácora de desarrollo
-   Turtle Games Study
+   Turtle Games Dev
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap');
@@ -38,16 +38,23 @@ body {
     position: relative;
 }
 
-/* ---------- grain / cold texture overlay ---------- */
+/* ---------- grain / cold texture overlay (with subtle flicker) ---------- */
 body::before {
     content: "";
     position: fixed;
-    inset: 0;
+    inset: -10px;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.05;
+    opacity: 0.055;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: grain-flicker 0.6s steps(2) infinite;
+}
+
+@keyframes grain-flicker {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(-1.5%, 1%); }
+    100% { transform: translate(1%, -1%); }
 }
 
 body::after {
@@ -100,25 +107,71 @@ body::after {
 }
 
 /* ============================================================
-   HEADER / HERO
+   SCROLL REVEAL (chapters, years, faq entries surface like
+   memories resurfacing — respects reduced motion)
+   ============================================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    body::before { animation: none; }
+}
+
+/* ============================================================
+   HEADER / HERO — framed like a torn cinematic title card
    ============================================================ */
 
 header {
     background: linear-gradient(180deg, #05070a 0%, var(--void) 100%);
-    padding: 90px 20px 60px;
+    padding: 46px 20px 70px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 2;
-    border-bottom: 1px solid var(--line);
+    clip-path: polygon(
+        0 0, 100% 0, 100% 96%,
+        96% 98%, 90% 96.5%, 84% 99%, 78% 96%, 72% 98.5%,
+        66% 96%, 60% 99%, 54% 96.5%, 48% 98%, 42% 96%,
+        36% 99%, 30% 96.5%, 24% 98.5%, 18% 96%, 12% 99%,
+        6% 96.5%, 0 98%
+    );
+    padding-bottom: 110px;
 }
 
-header img {
-    max-width: 140px;
-    filter: grayscale(60%) contrast(1.05) brightness(0.9);
+.letterbox-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #000;
+    z-index: 3;
+}
+
+.letterbox-bar.top { top: 0; }
+.letterbox-bar.bottom { bottom: 90px; }
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 10px;
+}
+
+header img.logo {
+    max-width: 130px;
+    filter: grayscale(65%) contrast(1.05) brightness(0.88);
     margin-bottom: 18px;
-    opacity: 0.92;
+    opacity: 0.9;
 }
 
 header h1 {
@@ -131,6 +184,13 @@ header h1 {
     margin: 6px 0 4px;
     box-shadow: none;
     text-shadow: 0 0 40px rgba(143, 185, 196, 0.15);
+    opacity: 0;
+    animation: title-fade-in 1.6s ease 0.2s forwards;
+}
+
+@keyframes title-fade-in {
+    from { opacity: 0; letter-spacing: 0.4em; }
+    to   { opacity: 1; letter-spacing: 0.12em; }
 }
 
 header h1 span {
@@ -145,6 +205,17 @@ header h1 span {
     letter-spacing: 0.02em;
     max-width: 480px;
     margin: 4px auto 26px;
+    min-height: 1.6em;
+    border-right: 1px solid transparent;
+}
+
+.tagline.typing {
+    border-right: 1px solid var(--frost-dim);
+    animation: caret-blink 0.9s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+    50% { border-color: transparent; }
 }
 
 .status-badge {
@@ -360,7 +431,55 @@ footer p {
     font-style: normal;
 }
 
-/* ---------- media frames (weathered / rust-bordered) ---------- */
+/* ============================================================
+   MEDIA FRAMES — weathered photo, HUD scan corners, scanlines
+   ============================================================ */
+
+.frame {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim)),
+        linear-gradient(var(--frost-dim), var(--frost-dim));
+    background-repeat: no-repeat;
+    background-position:
+        top left, top left,
+        top right, top right,
+        bottom left, bottom left,
+        bottom right, bottom right;
+    background-size: 16px 2px, 2px 16px;
+    opacity: 0.85;
+}
+
+.frame.video::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        180deg,
+        rgba(0,0,0,0.12) 0px,
+        rgba(0,0,0,0.12) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    mix-blend-mode: overlay;
+}
 
 article img,
 article video,
@@ -373,7 +492,12 @@ article iframe {
     outline: 6px solid var(--panel);
     outline-offset: -1px;
     box-shadow: 0 0 0 1px rgba(168, 70, 46, 0.25), 0 20px 40px -20px rgba(0,0,0,0.8);
-    filter: saturate(0.85) contrast(1.02);
+    filter: saturate(0.8) contrast(1.02) brightness(0.96);
+    transition: filter 0.5s ease;
+}
+
+article img:hover {
+    filter: saturate(1) contrast(1.03) brightness(1);
 }
 
 @media (min-width: 720px) {
@@ -424,6 +548,7 @@ article iframe {
     align-items: center;
     position: relative;
     z-index: 2;
+    counter-reset: record;
 }
 
 #faq > h2 {
@@ -445,10 +570,6 @@ article iframe {
 }
 
 #faq li:first-child { border-top: none; }
-
-#faq {
-    counter-reset: record;
-}
 
 #faq li h3::before {
     content: "REGISTRO " counter(record, decimal-leading-zero) " — ";
@@ -552,6 +673,6 @@ p {
 
 @media (max-width: 720px) {
     section { width: 92%; padding: 50px 16px; }
-    header { padding: 60px 16px 40px; }
+    header { padding: 30px 16px 130px; }
     .chapter { padding-left: 14px; }
 }
