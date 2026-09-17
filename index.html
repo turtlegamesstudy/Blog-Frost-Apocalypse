@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bitácora interactiva del desarrollo de Frost Apocalypse por Turtle Games Dev.">
+  <meta name="theme-color" content="#09151c">
+  <title>Frost Apocalypse — Bitácora de desarrollo</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <canvas id="snow-canvas" aria-hidden="true"></canvas>
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <div class="brand-mark">TGD<span>//</span>26</div>
+      <span class="status-badge" id="project-status">En desarrollo</span>
+      <p class="eyebrow" id="project-studio">Turtle Games Dev</p>
+      <h1 id="project-title">Frost Apocalypse</h1>
+      <p class="tagline" id="project-tagline"></p>
+      <p class="hero-copy" id="project-description"></p>
+      <nav aria-label="Navegación principal"><a href="#updates">Bitácora</a><a href="#about">Proyecto</a><a href="#media">Contenido extra</a><a href="#community">Comunidad</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="stats-wrap" aria-label="Resumen del proyecto"><div class="stat"><strong id="updates-total">08</strong><span>hitos publicados</span></div><div class="stat"><strong>2022—26</strong><span>en construcción</span></div><div class="stat"><strong id="last-update">—</strong><span>última actualización</span></div></section>
+    <section class="section" id="updates">
+      <div class="section-heading"><div><span class="eyebrow">Registro de supervivencia</span><h2>Bitácora del proyecto</h2></div><span class="result-count" id="updates-count"></span></div>
+      <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search-updates" type="search" placeholder="Buscar en la bitácora…" autocomplete="off"></label><div class="filters" id="category-filter" aria-label="Filtrar por categoría"></div></div>
+      <div class="updates-list" id="updates-list"></div>
+    </section>
+    <section class="section split" id="about"><div><span class="eyebrow">Ficha de producción</span><h2>Un proyecto en construcción.<br><em>Un desarrollo documentado.</em></h2><p>Esta página funciona como un centro de desarrollo: cada entrada conserva decisiones, prototipos, pruebas, avances y aprendizajes del proceso de creación del juego. Los detalles narrativos se mantienen reservados por ahora.</p></div><div class="fact-card"><p><span>Desarrollador</span><strong id="developer-value"></strong></p><p><span>Plataforma prevista</span><strong id="platform-value"></strong></p><p><span>Motor</span><strong>Unity 3D · URP</strong></p></div></section>
+    <section class="section community" id="community"><div class="section-heading"><div><span class="eyebrow">Canal abierto</span><h2>Únete a la conversación</h2></div></div><div class="comment-layout"><form id="comment-form" class="comment-form"><label>Nombre de usuario<input name="username" maxlength="24" minlength="3" pattern="[A-Za-z0-9_.-]{3,24}" required placeholder="tu_usuario"></label><fieldset class="rating-field"><legend>Calificación</legend><div class="star-picker" aria-label="Selecciona de 1 a 5 estrellas"><input id="star-5" type="radio" name="rating" value="5" required><label for="star-5" title="5 estrellas">★</label><input id="star-4" type="radio" name="rating" value="4"><label for="star-4" title="4 estrellas">★</label><input id="star-3" type="radio" name="rating" value="3"><label for="star-3" title="3 estrellas">★</label><input id="star-2" type="radio" name="rating" value="2"><label for="star-2" title="2 estrellas">★</label><input id="star-1" type="radio" name="rating" value="1"><label for="star-1" title="1 estrella">★</label></div></fieldset><label>Comentario<textarea name="text" maxlength="500" required placeholder="Comparte tu opinión sobre el desarrollo…"></textarea></label><button class="button" type="submit">Publicar comentario</button><small id="comment-message" role="status"></small></form><div id="comments-list" class="comments-list"></div></div></section>
+    <section class="section media-section" id="media"><div class="section-heading"><div><span class="eyebrow">Material de producción</span><h2>Contenido extra</h2></div><a class="button media-link" href="https://turtle-games-dev.itch.io/frost-apocalypse-1-demo-concept" target="_blank" rel="noopener noreferrer">Ver demo en itch.io ↗</a></div><p class="media-intro">Capturas y avances publicados durante el desarrollo de Frost Apocalypse.</p><div class="external-gallery"><a href="https://turtle-games-dev.itch.io/frost-apocalypse-1-demo-concept" target="_blank" rel="noopener noreferrer"><img src="./assets/images/itch/itch-1.png" alt="Captura de Frost Apocalypse publicada en itch.io" loading="lazy"><span>Galería de la demo conceptual</span></a><a href="https://www.instagram.com/p/DPk1llkDBsT/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/itch/itch-2.png" alt="Avance visual de Frost Apocalypse" loading="lazy"><span>Primer vistazo en Instagram</span></a><a href="https://www.instagram.com/reel/DdHOd6dvP-c/" target="_blank" rel="noopener noreferrer"><img src="./assets/images/itch/itch-3.png" alt="Visual showcase de Frost Apocalypse" loading="lazy"><span>Visual showcase</span></a></div><div class="video-callout"><span class="eyebrow">Próximamente</span><h3>Videos de desarrollo</h3><p>Los videos de gameplay, teasers y pruebas se incorporarán aquí cuando estén disponibles en el canal oficial.</p><a href="https://www.youtube.com/@Henredev" target="_blank" rel="noopener noreferrer" class="text-button">Visitar canal de YouTube ↗</a></div></section>
+    <section class="section faq" id="faq"><span class="eyebrow">Informe de campo</span><h2>Preguntas frecuentes</h2><div id="faq-list"></div></section>
+  </main>
+  <footer><div><strong>FROST APOCALYPSE</strong><span>© <span id="copyright-year"></span> Turtle Games Dev</span></div><button class="admin-link" id="open-editor" type="button">Acceso de administrador</button></footer>
+  <dialog id="editor-modal"><div class="modal-head"><div><span class="eyebrow">Panel privado</span><h2>Modo editor</h2></div><button id="close-editor" class="close" type="button" aria-label="Cerrar">×</button></div><div id="editor-login"><p>Introduce la contraseña de administrador para activar las herramientas locales.</p><form id="editor-form"><label>Contraseña<input id="editor-password" type="password" required autocomplete="current-password"></label><button class="button" type="submit">Activar modo editor</button></form></div><div id="editor-panel" hidden><p>Administra el contenido base y descarga los comentarios en JSON.</p><div class="editor-actions"><button class="button" id="save-draft" type="button">Guardar borrador local</button><button class="button secondary" id="export-data" type="button">Exportar datos del proyecto</button><button class="button secondary" id="export-comments" type="button">Descargar comments.json</button><button class="text-button" id="set-password" type="button">Cambiar contraseña local</button><button class="text-button danger" id="reset-draft" type="button">Restaurar contenido original</button></div></div><p id="editor-message" role="status"></p></dialog>
+  <script src="content.js"></script><script src="app.js"></script>
+  <script>const c=document.getElementById('snow-canvas'),x=c.getContext('2d');let f=[];function size(){c.width=innerWidth;c.height=innerHeight}addEventListener('resize',size);size();for(let i=0;i<55;i++)f.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+.4,s:Math.random()*.4+.15});(function tick(){x.clearRect(0,0,c.width,c.height);x.fillStyle='#cfe3e8';f.forEach(a=>{x.globalAlpha=.35;x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill();a.y+=a.s;if(a.y>c.height)a.y=-4});requestAnimationFrame(tick)})()</script>
+</body>
+</html>
